@@ -8,13 +8,10 @@
 </head>
 <body>
     <h1>Tietovisa</h1>
-    <h2>Rekisteröityminen</h2>
+    <h2>Sisäänkirjautuminen</h2>
     <form action="" method="post">
-        <label for="name">Nimi:</label>
+        <label for="name">Opettajan nimi:</label>
         <input type="text" id="name" name="name">
-        <br>
-        <label for="email">Sähköposti:</label>
-        <input type="email" id="email" name="email">
         <br>
         <label for="password">Salasana:</label>
         <input type="password" id="password" name="password">
