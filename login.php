@@ -18,6 +18,8 @@
         <br>
         <input type="submit" value="Lähetä">
     </form>
+
+    <h4>Jos haluat rekisteröityä, klikkaa <a href="register.php">tästä</a>.</h4>
     <footer>
         <p>&copy; Tietovisa, Markus Räisänen, JEDU - 2026.</p>
     </footer>
