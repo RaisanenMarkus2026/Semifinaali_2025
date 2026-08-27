@@ -9,7 +9,7 @@
 <body>
     <h1>Tietovisa</h1>
     <h2>Tulos</h2>
-    <form>
+    <form action="" method="post">
         <input type="text" id="tulos">
         <br>
         <input type="submit" value="Lähetä">
