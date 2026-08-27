@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="munTyyli.css">
-    <title>Tietovisa</title>
+    <title>Tietovisa - sisäänkirjautuminen</title>
 </head>
 <body>
     <h1>Tietovisa</h1>
