@@ -7,10 +7,11 @@
     <title>Tietovisa - tulos</title>
 </head>
 <body>
-    <h1>Tietovisa</h1>
+    <h1>TIETOVISA</h1>
     <h2>Tulos</h2>
     <form action="" method="post">
-        <input type="text" id="tulos">
+        <label for="name">Pelaajan nimi:</label>
+        <input type="text" id="name" name="name" required>
         <br>
         <input type="submit" value="Lähetä">
     </form>

@@ -7,7 +7,7 @@
     <title>Tietovisa - sisäänkirjautuminen</title>
 </head>
 <body>
-    <h1>Tietovisa</h1>
+    <h1>TIETOVISA</h1>
     <h2>Sisäänkirjautuminen</h2>
     <form action="" method="post">
         <label for="name">Opettajan nimi:</label>

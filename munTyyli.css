@@ -1,11 +1,127 @@
 * {
     box-sizing: border-box;
 }
-input {
-    margin: 10px;
+
+:root {
+    font-family: "Lexend Deca", sans-serif;
+    color: #2B3E50;
+    background: #F9FBFC;
 }
-footer {
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 48px 20px 0;
+    background: #F9FBFC;
+}
+
+h1,
+h2,
+h3,
+h4,
+form {
+    width: min(100%, 420px);
+}
+
+h1 {
+    margin: 0;
+    color: #2B3E50;
+    font-size: 35px;
+    font-weight: bold;
+    letter-spacing: 0.04em;
     text-align: center;
-    padding: 20px;
-    background-color: #f1f1f1;
+}
+
+h2 {
+    margin: 8px 0 24px;
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+    color: #2B3E50;
+}
+
+h3 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+    color: #2B3E50;
+}
+
+form {
+    padding: 28px;
+    margin: 0 auto 24px;
+    border: none;
+    border-radius: 4px;
+    background: #FFFFFF;
+    box-shadow: 0px 5px 5px rgba(43, 62, 80, 0.3);
+}
+
+label {
+    display: block;
+    margin: 0 0 7px;
+    font-weight: bold;
+    font-size: 16px;
+    color: #2B3E50;
+}
+
+input {
+    width: 100%;
+    margin: 0 0 18px;
+    padding: 12px 14px;
+    border: 1px solid #c8dfe3;
+    border-radius: 4px;
+    font: inherit;
+    font-size: 16px;
+    color: #2B3E50;
+}
+
+input:focus {
+    border-color: #00A1E4;
+    outline: 3px solid rgba(0, 161, 228, 0.18);
+}
+
+input[type="submit"] {
+    margin: 2px 0 0;
+    border: 0;
+    background: #00A1E4;
+    color: #FFFFFF;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 4px;
+    box-shadow: 0px 5px 5px rgba(43, 62, 80, 0.3);
+}
+
+input[type="submit"]:hover {
+    background: #0082B2;
+}
+
+h4 {
+    margin: 20px 0 0;
+    color: #2B3E50;
+    font-size: 12px;
+    font-weight: normal;
+    text-align: center;
+}
+
+a {
+    color: #00A1E4;
+    font-weight: regular;
+    text-decoration: underline;
+    font-size: 16px;
+}
+
+footer {
+    width: 100%;
+    margin-top: auto;
+    padding: 28px 0 18px;
+    color: #2B3E50;
+    font-size: 12px;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
 }
