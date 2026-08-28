@@ -22,13 +22,14 @@
 
         if ($_SERVER["REQUEST_METHOD"] == "POST") { 
 
+            // Hae lomakkeelta lähetetyt tiedot.
             $name = $_POST["name"];
             $password = $_POST["password"];
 
-            // Yhdistä tietokantaan
+            // Yhdistä tietokantaan.
             $conn = new mysqli("localhost", "root", "", "taitaja");
 
-            // Tarkista yhteys
+            // Tarkista yhteys.
             if ($conn->connect_error) {
                 die("Yhteys epäonnistui: " . $conn->connect_error);
             }
@@ -51,15 +52,17 @@
                 }
             }
         }
-
-        // Sessionin aloittaminen ja käyttäjän nimen tallentaminen istuntoon. 
-        // session_start();
-        // $_SESSION["name"] = $_POST["name"];
-        // Muista lopuksi session_end() kun istunto on päättynyt.
-        //session_end();
     ?>
     <footer>
         <p>&copy; Tietovisa, Markus Räisänen, JEDU - 2026.</p>
     </footer>
 </body>
 </html>
+
+<?php
+    // Sessionin aloittaminen ja käyttäjän nimen tallentaminen istuntoon. 
+    // session_start();
+    // $_SESSION["name"] = $_POST["name"];
+    // Muista lopuksi session_end() kun istunto on päättynyt.
+    // session_end();
+?>
