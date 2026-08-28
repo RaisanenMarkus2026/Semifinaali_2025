@@ -40,14 +40,14 @@ h2 {
     font-size: 28px;
     font-weight: bold;
     text-align: center;
-    color: #2B3E50;
+    color: #00E4B5;
 }
 
 h3 {
     margin: 0;
     font-size: 24px;
     font-weight: bold;
-    color: #2B3E50;
+    color: #00E4B5;
 }
 
 form {
@@ -95,7 +95,7 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
-    background: #0082B2;
+    background: #6384a3;
 }
 
 h4 {
