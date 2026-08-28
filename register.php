@@ -19,7 +19,6 @@
         <input type="submit" value="Lisää">
     </form>
     <?php
-
         if ($_SERVER["REQUEST_METHOD"] == "POST") { 
 
             // Hae lomakkeelta lähetetyt tiedot.
@@ -27,7 +26,7 @@
             $password = $_POST["password"];
 
             // Yhdistä tietokantaan.
-            $conn = new mysqli("localhost", "root", "", "taitaja");
+            $conn = new mysqli("localhost", "root", "", "tietovisa");
 
             // Tarkista yhteys.
             if ($conn->connect_error) {
