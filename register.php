@@ -11,10 +11,10 @@
     <h2>Rekisteröityminen</h2>
     <form action="" method="post">
         <label for="name">Uusi opettaja:</label>
-        <input type="text" id="name" name="name" required>
+        <input type="text" id="name" name="nimi" required>
         <br>
         <label for="password">Salasana:</label>
-        <input type="password" id="password" name="password" required>
+        <input type="password" id="password" name="s_sana" required>
         <br>
         <input type="submit" value="Lisää">
     </form>
@@ -22,11 +22,11 @@
         if ($_SERVER["REQUEST_METHOD"] == "POST") { 
 
             // Hae lomakkeelta lähetetyt tiedot.
-            $name = $_POST["name"];
-            $password = $_POST["password"];
+            $name = $_POST["nimi"];
+            $password = $_POST["s_sana"];
 
             // Yhdistä tietokantaan.
-            $conn = new mysqli("localhost", "root", "", "tietovisa");
+            $conn = new mysqli("localhost", "root", "", "web-kehitys");
 
             // Tarkista yhteys.
             if ($conn->connect_error) {
