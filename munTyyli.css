@@ -117,11 +117,134 @@ footer {
     width: 100%;
     margin-top: auto;
     padding: 28px 0 18px;
-    color: #2B3E50;
+    background: #2B3E50;
+    color: #F9FBFC;
     font-size: 12px;
     text-align: center;
 }
 
 footer p {
     margin: 0;
+}
+
+/* Etusivu */
+
+.laatikko {
+    display: block;
+    gap: 10px;
+    padding: 10px;
+}
+
+.osa {
+    flex: 1 1 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+    margin: 0 auto 24px;
+    border: none;
+    border-radius: 4px;
+    background: #FFFFFF;
+    box-shadow: 0px 5px 5px rgba(43, 62, 80, 0.3);
+}
+
+#ulompi_laatikko {
+    border: 2px solid #00E4B5;
+}
+
+.pieni_laatikko {
+    display: flex;
+    align-items: stretch;
+    gap: 10px;
+}
+
+.pieni_laatikko .osa {
+    min-height: 100%;
+}
+
+button {
+    padding: 12px 14px;
+    margin: 2px 0 0;
+    border: 0;
+    background: #2B3E50;
+    color: #FFFFFF;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 4px;
+    box-shadow: 0px 0px 10px rgba(43, 62, 80, 0.3);
+}
+
+.osa button:hover {
+    background: #6384a3;
+}
+
+.osa h3 {
+    margin: 0 0 10px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #00E4B5;
+}
+
+.osa h1{
+    text-align: left;
+}
+
+.osa button {
+align-self: flex-start;
+width: fit-content;
+}
+
+/* Navigointi */
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333333;
+}
+
+ul li {
+  float: left;
+}
+
+ul li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+ul li a:hover {
+  background-color: #111111;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 0 20px;
+}
+
+header h1 {
+    width: auto;
+    margin: 0;
+    text-align: left;
+    font-size: 62px;
+}
+
+header nav {
+    margin-left: auto;
+    margin-right: 0;
+}
+
+header nav ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }

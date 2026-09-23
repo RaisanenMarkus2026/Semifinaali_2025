@@ -7,7 +7,7 @@
     <title>Tietovisa - tulos</title>
 </head>
 <body>
-    <h1>TIETOVISA</h1>
+    <h1>TAITAJA TIETOVISA</h1>
     <h2>Tulos</h2>
     <form action="" method="post">
         <label for="name">Pelaajan nimi:</label>
