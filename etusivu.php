@@ -17,7 +17,6 @@
             </ul>
         </nav>
     </header>
-
     <div class="laatikko" id="ulompi_laatikko">
         <div class="pieni_laatikko">
             <div class="osa">
