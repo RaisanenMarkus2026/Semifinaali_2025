@@ -12,14 +12,14 @@
         <nav>
             <ul>
                 <li><a href="etusivu.php">Etusivu</a></li>
-                <li><a href="tulos.php">Tulokset</a></li>
+                <li><a href="pelaa.php">Pelaa</a></li>
                 <li><a href="login.php">Kirjaudu</a></li>
             </ul>
         </nav>
     </header>
     <main>
         <h3>Haluatko testata taitojasi? Se on nyt helppoa! Valitse opettaja ja aihealue. Aloita heti!</h3>
-        <button>Pelaa nyt</button><br><br>
+        <button onclick="window.location.href='pelaa.php'">Pelaa nyt</button><br><br>
         <img src="assets/wireframes/gameview-desktop.png" alt="Tietovisa">
         <img src="assets/images/pexels-rdne-7092416.jpg" alt="Tietovisa">
         <h3>Miten pelataan?</h3>
