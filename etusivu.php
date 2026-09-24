@@ -18,7 +18,6 @@
         </nav>
     </header>
     <main>
-        <h1>TIETOVISA</h1>
         <h3>Haluatko testata taitojasi? Se on nyt helppoa! Valitse opettaja ja aihealue. Aloita heti!</h3>
         <button>Pelaa nyt</button><br><br>
         <img src="assets/wireframes/gameview-desktop.png" alt="Tietovisa">

@@ -7,49 +7,26 @@
     <title>Tietovisa - rekisteröityminen</title>
 </head>
 <body>
-    <h1>TIETOVISA</h1>
-    <h2>Rekisteröityminen</h2>
-    <form action="" method="post">
-        <label for="name">Uusi opettaja:</label>
-        <input type="text" id="name" name="nimi" required><br>
-        <label for="password">Salasana:</label>
-        <input type="password" id="password" name="s_sana" required><br>
-        <input type="submit" value="Lisää">
-    </form>
-    <?php
-        if ($_SERVER["REQUEST_METHOD"] == "POST") { 
-
-            // Hae lomakkeelta lähetetyt tiedot.
-            $name = $_POST["nimi"];
-            $password = $_POST["s_sana"];
-
-            // Yhdistä tietokantaan.
-            $conn = new mysqli("localhost", "root", "", "web-kehitys");
-
-            // Tarkista yhteys.
-            if ($conn->connect_error) {
-                die("Yhteys epäonnistui: " . $conn->connect_error);
-            }
-
-            // Tarkista, onko opettajan nimi jo olemassa
-            $checkSql = "SELECT * FROM teachers WHERE username='$name'";
-            $result = $conn->query($checkSql);
-            if ($result->num_rows > 0) {
-                echo "Opettajan nimi on jo käytössä. Valitse toinen nimi.";
-                $conn->close();
-            } else {
-                // Lisää uusi opettaja tietokantaan
-                $sql = "INSERT INTO teachers (username, password_hash) VALUES ('$name', '$password')";
-
-                if ($conn->query($sql) === TRUE) {
-                    echo "Uusi opettaja lisätty onnistuneesti.";
-                    $conn->close();
-                } else {
-                    echo "Virhe: " . $sql . "<br>" . $conn->error;
-                }
-            }
-        }
-    ?>
+    <header>
+        <h1>TIETOVISA</h1>
+        <nav>
+            <ul>
+                <li><a href="etusivu.php">Etusivu</a></li>
+                <li><a href="tulos.php">Tulokset</a></li>
+                <li><a href="login.php">Kirjaudu</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Rekisteröityminen</h2>
+        <form action="" method="post">
+            <label for="name">Uusi opettaja:</label>
+            <input type="text" id="name" name="nimi" required><br>
+            <label for="password">Salasana:</label>
+            <input type="password" id="password" name="s_sana" required><br>
+            <input type="submit" value="Lisää">
+        </form>
+    </main>
     <footer>
         <p>&copy; Tietovisa, Markus Räisänen, JEDU - 2026.</p>
     </footer>
@@ -57,9 +34,36 @@
 </html>
 
 <?php
-    // Sessionin aloittaminen ja käyttäjän nimen tallentaminen istuntoon. 
-    // session_start();
-    // $_SESSION["name"] = $_POST["name"];
-    // Muista lopuksi session_end() kun istunto on päättynyt.
-    // session_end();
+    if ($_SERVER["REQUEST_METHOD"] == "POST") { 
+
+        // Hae lomakkeelta lähetetyt tiedot.
+        $name = $_POST["nimi"];
+        $password = $_POST["s_sana"];
+
+        // Yhdistä tietokantaan.
+        $conn = new mysqli("localhost", "root", "", "web-kehitys");
+
+        // Tarkista yhteys.
+        if ($conn->connect_error) {
+            die("Yhteys epäonnistui: " . $conn->connect_error);
+        }
+
+        // Tarkista, onko opettajan nimi jo olemassa
+        $checkSql = "SELECT * FROM teachers WHERE username='$name'";
+        $result = $conn->query($checkSql);
+        if ($result->num_rows > 0) {
+            echo "Opettajan nimi on jo käytössä. Valitse toinen nimi.";
+            $conn->close();
+        } else {
+            // Lisää uusi opettaja tietokantaan
+            $sql = "INSERT INTO teachers (username, password_hash) VALUES ('$name', '$password')";
+
+            if ($conn->query($sql) === TRUE) {
+                echo "Uusi opettaja lisätty onnistuneesti.";
+                $conn->close();
+            } else {
+                echo "Virhe: " . $sql . "<br>" . $conn->error;
+            }
+        }
+    }
 ?>

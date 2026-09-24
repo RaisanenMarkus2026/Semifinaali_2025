@@ -7,16 +7,27 @@
     <title>Tietovisa - sisäänkirjautuminen</title>
 </head>
 <body>
-    <h1>TIETOVISA</h1>
-    <h2>Sisäänkirjautuminen</h2>
-    <form action="" method="post">
-        <label for="name">Opettajan nimi:</label>
-        <input type="text" id="name" name="name" required><br>
-        <label for="password">Salasana:</label>
-        <input type="password" id="password" name="password" required><br>
-        <input type="submit" value="Lähetä">
-    </form>
-    <h4>Jos haluat rekisteröityä, klikkaa <a href="register.php">tästä</a>.</h4>
+    <header>
+        <h1>TIETOVISA</h1>
+        <nav>
+            <ul>
+                <li><a href="etusivu.php">Etusivu</a></li>
+                <li><a href="tulos.php">Tulokset</a></li>
+                <li><a href="login.php">Kirjaudu</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Sisäänkirjautuminen</h2>
+        <form action="" method="post">
+            <label for="name">Opettajan nimi:</label>
+            <input type="text" id="name" name="name" required><br>
+            <label for="password">Salasana:</label>
+            <input type="password" id="password" name="password" required><br>
+            <input type="submit" value="Lähetä">
+        </form>
+        <h4>Jos haluat rekisteröityä, klikkaa <a href="register.php">tästä</a>.</h4>
+    </main>
     <footer>
         <p>&copy; Tietovisa, Markus Räisänen, JEDU - 2026.</p>
     </footer>
