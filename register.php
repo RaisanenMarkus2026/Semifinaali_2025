@@ -11,11 +11,9 @@
     <h2>Rekisteröityminen</h2>
     <form action="" method="post">
         <label for="name">Uusi opettaja:</label>
-        <input type="text" id="name" name="nimi" required>
-        <br>
+        <input type="text" id="name" name="nimi" required><br>
         <label for="password">Salasana:</label>
-        <input type="password" id="password" name="s_sana" required>
-        <br>
+        <input type="password" id="password" name="s_sana" required><br>
         <input type="submit" value="Lisää">
     </form>
     <?php

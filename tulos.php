@@ -8,11 +8,10 @@
 </head>
 <body>
     <h1>TIETOVISA</h1>
-    <h2>Tulos</h2>
+    <h2>Tulokset</h2>
     <form action="" method="post">
         <label for="name">Pelaajan nimi:</label>
-        <input type="text" id="name" name="name" required>
-        <br>
+        <input type="text" id="name" name="name" required><br>
         <input type="submit" value="Lähetä">
     </form>
     <footer>
