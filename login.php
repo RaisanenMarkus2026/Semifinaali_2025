@@ -9,13 +9,7 @@
 <body>
     <header>
         <h1>TIETOVISA</h1>
-        <nav>
-            <ul>
-                <li><a href="etusivu.php">Etusivu</a></li>
-                <li><a href="pelaa.php">Pelaa</a></li>
-                <li><a href="login.php">Kirjaudu</a></li>
-            </ul>
-        </nav>
+        <?php include 'oppilaan_navigointi.php'; ?>
     </header>
     <main>
         <h2>Sisäänkirjautuminen</h2>
@@ -26,7 +20,7 @@
             <input type="password" id="password" name="password" required><br>
             <input type="submit" value="Lähetä">
         </form>
-        <h4>Jos haluat rekisteröityä, klikkaa <a href="register.php">tästä</a>.</h4>
+        <h4>Jos haluat rekisteröityä, klikkaa <a href="register.php">tästä.</a></h4>
     </main>
     <footer>
         <p>&copy; Tietovisa, Markus Räisänen, JEDU - 2026.</p>

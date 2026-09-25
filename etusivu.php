@@ -9,13 +9,7 @@
 <body>
     <header>
         <h1>TIETOVISA</h1>
-        <nav>
-            <ul>
-                <li><a href="etusivu.php">Etusivu</a></li>
-                <li><a href="pelaa.php">Pelaa</a></li>
-                <li><a href="login.php">Kirjaudu</a></li>
-            </ul>
-        </nav>
+        <?php include 'oppilaan_navigointi.php'; ?>
     </header>
     <main>
         <h3>Haluatko testata taitojasi? Se on nyt helppoa! Valitse opettaja ja aihealue. Aloita heti!</h3>
