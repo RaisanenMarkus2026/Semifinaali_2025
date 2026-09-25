@@ -14,7 +14,7 @@
     <main>
         <h3>Haluatko testata taitojasi? Se on nyt helppoa! Valitse opettaja ja aihealue. Aloita heti!</h3>
         <button onclick="window.location.href='pelaa.php'">Pelaa nyt</button><br><br>
-        <img src="assets/wireframes/gameview-desktop.png" alt="Tietovisa">
+        <img src="assets/images/pexels-padrinan-1591061.jpg" alt="Tietovisa">
         <img src="assets/images/pexels-rdne-7092416.jpg" alt="Tietovisa">
         <h3>Miten pelataan?</h3>
         <ol>
