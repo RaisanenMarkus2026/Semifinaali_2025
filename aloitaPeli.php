@@ -44,15 +44,17 @@
             <label for="peli2">Keskipitkä (10)</label><br>  
             <input type="radio" id="peli3" name="peli" value="15">
             <label for="peli3">Pitkä (15)</label><br><br>
-            <input type="submit" value="Aloita peli" id="pelaaNappi">
-            <script>
-            document.getElementById("pelaaNappi").addEventListener("click", myFunction);  
-            function myFunction() {  
-                window.location.href="pelaa.php";  
+        </form>
+        <button onclick="window.location.href='pelaa.php'" id="pelataan">Pelaa nyt</button><br><br>
+        <script>
+            document.getElementById("pelataan").addEventListener("click", myFunction);  
+            function myFunction() {   
+                // Tähän haku
             }
         </script>
-        </form>
     </main>
-
+    <footer>
+        <p>&copy; Tietovisa, Markus Räisänen, JEDU - 2026.</p>
+    </footer>
 </body>
 </html>

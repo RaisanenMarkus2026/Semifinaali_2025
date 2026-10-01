@@ -1,3 +1,5 @@
+<?php include_once "yhteys.php" ?>
+
 <!DOCTYPE html>
 <html lang="fi">
 <head>
@@ -13,7 +15,7 @@
     </header>
     <main>
         <h2>Rekisteröityminen</h2>
-        <form action="" method="post">
+        <form action="" method="POST">
             <label for="name">Uusi opettaja:</label>
             <input type="text" id="name" name="nimi" required><br>
             <label for="password">Salasana:</label>
@@ -29,34 +31,26 @@
 
 <?php
     if ($_SERVER["REQUEST_METHOD"] == "POST") { 
-
+        
         // Hae lomakkeelta lähetetyt tiedot.
-        $name = $_POST["nimi"];
+        $nimi = $_POST["nimi"];
         $password = $_POST["s_sana"];
 
-        // Yhdistä tietokantaan.
-        $conn = new mysqli("localhost", "root", "", "web-kehitys");
-
-        // Tarkista yhteys.
-        if ($conn->connect_error) {
-            die("Yhteys epäonnistui: " . $conn->connect_error);
-        }
-
         // Tarkista, onko opettajan nimi jo olemassa
-        $checkSql = "SELECT * FROM teachers WHERE username='$name'";
-        $result = $conn->query($checkSql);
+        $tarkistaSql = "SELECT * FROM teachers WHERE username='$nimi'";
+        $result = $yhteys->query($tarkistaSql);
         if ($result->num_rows > 0) {
             echo "Opettajan nimi on jo käytössä. Valitse toinen nimi.";
-            $conn->close();
+            $yhteys->close();
         } else {
             // Lisää uusi opettaja tietokantaan
-            $sql = "INSERT INTO teachers (username, password_hash) VALUES ('$name', '$password')";
+            $sqlLisaa = "INSERT INTO teachers (username, password_hash) VALUES ('$nimi', '$password')";
 
-            if ($conn->query($sql) === TRUE) {
+            if ($yhteys->query($sqlLisaa) === TRUE) {
                 echo "Uusi opettaja lisätty onnistuneesti.";
-                $conn->close();
+                $yhteys->close();
             } else {
-                echo "Virhe: " . $sql . "<br>" . $conn->error;
+                echo "Virhe: " . $sqlLisaa . "<br>" . $yhteys->error;
             }
         }
     }
