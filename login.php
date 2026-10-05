@@ -1,3 +1,10 @@
+<?php
+    session_start();
+    include "yhteys.php";
+    $_SESSION['loggedIn'] = '';
+    $_SESSION['teacherId'] = '';
+?>
+
 <!DOCTYPE html>
 <html lang="fi">
 <head>
@@ -18,7 +25,7 @@
             <input type="text" id="name" name="name" required><br>
             <label for="password">Salasana:</label>
             <input type="password" id="password" name="password" required><br>
-            <input type="submit" value="Lähetä">
+            <input type="submit" value="Kirjaudu">
         </form>
         <h4>Jos haluat rekisteröityä, klikkaa <a href="register.php">tästä.</a></h4>
     </main>
@@ -27,3 +34,28 @@
     </footer>
 </body>
 </html>
+
+<?php
+    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+        $name = $_POST['name'];
+        $password = $_POST['password'];
+        $haku = "SELECT * FROM teachers WHERE username = '$name'";
+        $tulos = $yhteys->query($haku);
+
+        if ($tulos->num_rows > 0) {
+            $rivi = $tulos->fetch_assoc();
+            if ($rivi['password_hash'] === $password) {
+                $_SESSION['loggedIn'] = $name;
+                $_SESSION['teacherId'] = $rivi['id'];
+                header("Location: lisaaKategoria.php");
+                exit();
+            } else {
+                echo "<p style='color:red;'>Väärä salasana.</p>";
+            }
+        } else {
+            echo "<p style='color:red;'>Opettajaa ei löydy.</p>";
+            exit();
+        }
+    } 
+    $yhteys->close();
+?>

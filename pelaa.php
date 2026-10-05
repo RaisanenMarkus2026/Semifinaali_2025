@@ -1,3 +1,9 @@
+<?php
+    session_start();
+    $_SESSION['valittuPeli'] = $_POST['peli'] ?? '';
+    var_dump($_SESSION);
+?>
+
 <!DOCTYPE html>
 <html lang="fi">
 <head>

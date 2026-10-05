@@ -1,4 +1,9 @@
-<?php include_once "yhteys.php" ?>
+<?php
+    session_start();
+    include 'yhteys.php';
+    var_dump($_SESSION['loggedIn']);
+    var_dump($_SESSION['teacherId']);
+?>
 
 <!DOCTYPE html>
 <html lang="fi">
@@ -18,7 +23,7 @@
         <button onclick="window.location.href='uusiKategoria.php'" id="uusiAihe" style="float: right;">Luo uusi kategoria</button><br><br>
         <ol style="padding: 10px";>
             <?php
-                $haku = "SELECT * FROM categories WHERE teacher_id = '1'";
+                $haku = "SELECT * FROM categories WHERE teacher_id = '$_SESSION[teacherId]'";
                 $vastaus = $yhteys->query($haku);
                 if ($vastaus->num_rows > 0) {
                     while ($rivi = $vastaus->fetch_assoc()) {
