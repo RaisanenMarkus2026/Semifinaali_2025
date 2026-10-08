@@ -146,12 +146,13 @@ $esc = static fn($arvo) => htmlspecialchars((string) $arvo, ENT_QUOTES, 'UTF-8')
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="munTyyli.css">
-    <title>Taitaja Tietotesti - Pelaa</title>
+    <title>Pelaa</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon/favicon.ico">
 </head>
 <body>
     <header>
-        <h1>TAITAJA TIETOTESTI</h1>
-        <a href="login.php">Kirjaudu sisään</a>
+        <h1>TIETOVISA</h1>
+        <?php include 'oppilaan_navigointi.php'; ?>
     </header>
     <main>
         <?php if ($virhe !== ''): ?>

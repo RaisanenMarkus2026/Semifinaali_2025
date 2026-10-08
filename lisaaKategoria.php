@@ -1,8 +1,8 @@
 <?php
     session_start();
     include 'yhteys.php';
-    var_dump($_SESSION['loggedIn']);
-    var_dump($_SESSION['teacherId']);
+    // var_dump($_SESSION['loggedIn']);
+    // var_dump($_SESSION['teacherId']);
 ?>
 
 <!DOCTYPE html>
@@ -11,7 +11,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="munTyyli.css">
-    <title>Lisää kategoria</title>
+    <title>Kategoriat</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon/favicon.ico">
 </head>
 <body>
     <header>
