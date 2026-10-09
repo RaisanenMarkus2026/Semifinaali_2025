@@ -1,25 +1,19 @@
 * {
-    margin: 2px;
-    padding: 2px;
+    margin: 0px;
+    padding: 0px;
     box-sizing: border-box;
 }
 
 img {
     max-width: 33%;
 }
-body {
-  margin: 0;
-  padding: 0;
-}
 
-h2, p {
-  margin: 10px;
+main {
+    padding: 20px;
 }
 
 ul {
   list-style-type: none;
-  margin: 0;
-  padding: 0;
   overflow: hidden;
   background-color: #2B3E50;
 }
@@ -38,6 +32,10 @@ ul li a {
 
 ul li a:hover {
   background-color: #111111;
+}
+
+input {
+  margin: 5px;
 }
 
 /* Footer */

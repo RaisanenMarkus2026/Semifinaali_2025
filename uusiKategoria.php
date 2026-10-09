@@ -20,8 +20,8 @@
     <main>
         <h2>Uusi kategoria</h2>
         <form action="" method="post">
-            <label for="kategoria"><?php echo $_SESSION['loggedIn']; ?></label><br><br>
-            <input type="text" name="kategoria" required><br><br>
+            <label for="kategoria"><?php echo $_SESSION['loggedIn']; ?>: </label>
+            <input type="text" name="kategoria" required><br>
             <input type="submit" value="Lisää">
         </form>
     </main>
