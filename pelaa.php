@@ -156,8 +156,8 @@ $esc = static fn($arvo) => htmlspecialchars((string) $arvo, ENT_QUOTES, 'UTF-8')
     </header>
     <main>
         <?php if ($virhe !== ''): ?>
-            <p class="game-message" role="alert"><?= $esc($virhe) ?></p>
-            <a class="game-link" href="aloitaPeli.php">Takaisin pelin aloitukseen</a>
+            <p role="alert"><?= $esc($virhe) ?></p>
+            <a href="aloitaPeli.php">Takaisin pelin aloitukseen</a>
         <?php elseif ($kysymys !== null): ?>
             <div>
                 <p>Kysymys <?= $kysymysNumero + 1 ?>/<?= $kysymyksiaYhteensa ?></p>
@@ -182,6 +182,8 @@ $esc = static fn($arvo) => htmlspecialchars((string) $arvo, ENT_QUOTES, 'UTF-8')
                 <p>Peli päättyi</p>
                 <p>Pisteet: <?= (int) $pisteet ?>/<?= $kysymyksiaYhteensa ?></p>
             </div>
+            <a href="tulos.php">Tallenna tulos</a>
+            <p>TAI</p>
             <a href="aloitaPeli.php">Pelaa uudelleen</a>
         <?php else: ?>
             <p>Aloita peli valitsemalla aihealue ja kysymysten määrä.</p>
