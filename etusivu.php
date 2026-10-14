@@ -12,18 +12,26 @@
         <h1>TIETOVISA</h1>
         <?php include 'oppilaan_navigointi.php'; ?>
     </header>
-    <main>
-        <h3>Haluatko testata taitojasi? Se on nyt helppoa! Valitse opettaja ja aihealue. Aloita heti!</h3>
-        <button onclick="window.location.href='aloitaPeli.php'">Pelaa nyt</button><br><br>
-        <img src="assets/images/pexels-padrinan-1591061.jpg" alt="Tietovisa">
-        <img src="assets/images/pexels-rdne-7092416.jpg" alt="Tietovisa">
-        <h3>Miten pelataan?</h3>
-        <ol>
-            <li>Tee ensimmäinen valinta - keneltä haluat oppia ja mistä aiheesta?</li>
-            <li>Päätä kuinka monta kysymystä haluat vastata: 5, 10 tai 15.</li>
-            <li>Vastaa kysymyksiin ja seuraa tulostasi reaaliajassa.</li>
-            <li>Kun olet valmis, voit tarkistaa tuloksesi ja verrata sitä muiden pelaajien tuloksiin.</li>
-        </ol>
+    <main class="etusivu">
+        <div class="laatikko1">
+            <img src="assets/images/pexels-padrinan-1591061.jpg" alt="Tietovisa">
+            <div class="laatikko-sisalto">
+                <h2>Haluatko testata taitojasi? Se on nyt helppoa! Valitse opettaja ja aihealue.</h2>
+                <button onclick="window.location.href='aloitaPeli.php'">Pelaa nyt</button><br><br>
+            </div>
+        </div>
+        <div class="laatikko2">
+            <img src="assets/images/pexels-rdne-7092416.jpg" alt="Tietovisa">
+            <div class="laatikko-sisalto">
+                <h2>Miten pelataan?</h2>
+                <ol>
+                    <li>Tee ensimmäinen valinta - keneltä haluat oppia ja mistä aiheesta?</li>
+                    <li>Päätä kuinka monta kysymystä haluat vastata: 5, 10 tai 15.</li>
+                    <li>Vastaa kysymyksiin ja seuraa tulostasi reaaliajassa.</li>
+                    <li>Kun olet valmis, voit tarkistaa tuloksesi ja verrata sitä muiden pelaajien tuloksiin.</li>
+                </ol>
+            <div>
+        </div>    
     </main>
     <footer>
         <p>&copy; Tietovisa, Markus Räisänen, JEDU - 2026.</p>
