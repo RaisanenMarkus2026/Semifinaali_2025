@@ -38,9 +38,11 @@
         $kategoria = $_SESSION['valittuPeli'];
         $maara = count($_SESSION['pelinKysymykset']);
         $tulos = $pisteet . '/' . $maara;
+        echo "<script>console.log('Ongelmakohta');</script>";
         $haku = "INSERT INTO tulokset (Nimi, Tulos, Testi_kategoria, Testi_aika) VALUES ('$pelaaja', '$tulos', '$kategoria', NOW())";
         if ($yhteys->query($haku) === TRUE) {
             echo "<p style='color:green;'>Tulos tallennettu onnistuneesti.</p>";
+            sleep(2);
             header("Location: aloitaPeli.php");
             exit();
         } else {
